@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "TMROFutures"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "A simple Futures library written in Swift."
 
   # This description is used to generate tags and improve search results.
@@ -66,7 +66,7 @@ Pod::Spec.new do |spec|
 
     spec.ios.deployment_target = "12.1"
     spec.swift_version = "4.2"
-    
+
   # spec.platform     = :ios
   # spec.platform     = :ios, "5.0"
 
