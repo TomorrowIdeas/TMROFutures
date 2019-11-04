@@ -11,9 +11,9 @@ import Foundation
 // A wrapper object that will contain a value at some time in the future.
 // The contained value is intentionally not directly accessible. Interested parties can be notified when
 // the value is set by assigning a callback through the observe function.
-public class TMROFuture<Value> {
+public class Future<Value> {
 
-    fileprivate var result: Result<Value, Error>? {
+    internal var result: Result<Value, Error>? {
         didSet {
             // Report a result whenever it is assigned
             if let result = self.result {
@@ -64,33 +64,5 @@ public class TMROFuture<Value> {
                 break
             }
         }
-    }
-}
-
-// A future value that can be fulfilled. Promises are a subclass of futures that allow you to set the
-// result or pass in an error, thus alerting any observers.
-public final class TMROPromise<Value>: TMROFuture<Value> {
-
-    public init(value: Value? = nil) {
-        super.init()
-
-        // If the value was already known at the time the promise was constructed,
-        // we can report the value directly
-        if let value = value {
-            self.result = Result.success(value)
-        }
-    }
-
-    public init(error: Error) {
-        super.init()
-        self.result = Result.failure(error)
-    }
-
-    public func resolve(with value: Value) {
-        self.result = .success(value)
-    }
-
-    public func reject(with error: Error) {
-        self.result = .failure(error)
     }
 }

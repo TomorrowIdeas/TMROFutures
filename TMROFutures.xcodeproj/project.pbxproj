@@ -13,8 +13,10 @@
 		D609AE80236FAA34004FA89A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D609AE7E236FAA34004FA89A /* Main.storyboard */; };
 		D609AE82236FAA36004FA89A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D609AE81236FAA36004FA89A /* Assets.xcassets */; };
 		D609AE85236FAA36004FA89A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D609AE83236FAA36004FA89A /* LaunchScreen.storyboard */; };
-		D609AE8B236FAB54004FA89A /* TMROFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D609AE8A236FAB54004FA89A /* TMROFuture.swift */; };
-		D609AE8C236FAB54004FA89A /* TMROFuture.swift in Sources */ = {isa = PBXBuildFile; fileRef = D609AE8A236FAB54004FA89A /* TMROFuture.swift */; };
+		D609AE8B236FAB54004FA89A /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = D609AE8A236FAB54004FA89A /* Future.swift */; };
+		D609AE8C236FAB54004FA89A /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = D609AE8A236FAB54004FA89A /* Future.swift */; };
+		D6D91C2323709CAC0097235D /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D91C2223709CAC0097235D /* Promise.swift */; };
+		D6D91C2423709CAC0097235D /* Promise.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6D91C2223709CAC0097235D /* Promise.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +30,8 @@
 		D609AE81236FAA36004FA89A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D609AE84236FAA36004FA89A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D609AE86236FAA36004FA89A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D609AE8A236FAB54004FA89A /* TMROFuture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMROFuture.swift; sourceTree = "<group>"; };
+		D609AE8A236FAB54004FA89A /* Future.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Future.swift; sourceTree = "<group>"; };
+		D6D91C2223709CAC0097235D /* Promise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Promise.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +75,8 @@
 			children = (
 				D609AE6A236FA99E004FA89A /* TMROFutures.h */,
 				D609AE6B236FA99E004FA89A /* Info.plist */,
-				D609AE8A236FAB54004FA89A /* TMROFuture.swift */,
+				D609AE8A236FAB54004FA89A /* Future.swift */,
+				D6D91C2223709CAC0097235D /* Promise.swift */,
 			);
 			path = TMROFutures;
 			sourceTree = "<group>";
@@ -202,7 +206,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D609AE8B236FAB54004FA89A /* TMROFuture.swift in Sources */,
+				D609AE8B236FAB54004FA89A /* Future.swift in Sources */,
+				D6D91C2323709CAC0097235D /* Promise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,7 +217,8 @@
 			files = (
 				D609AE7D236FAA34004FA89A /* ViewController.swift in Sources */,
 				D609AE79236FAA34004FA89A /* AppDelegate.swift in Sources */,
-				D609AE8C236FAB54004FA89A /* TMROFuture.swift in Sources */,
+				D609AE8C236FAB54004FA89A /* Future.swift in Sources */,
+				D6D91C2423709CAC0097235D /* Promise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
