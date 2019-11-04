@@ -11,7 +11,7 @@ import Foundation
 // A wrapper object that will contain a value at some time in the future.
 // The contained value is intentionally not directly accessible. Interested parties can be notified when
 // the value is set by assigning a callback through the observe function.
-class TMROFuture<Value> {
+public class TMROFuture<Value> {
 
     fileprivate var result: Result<Value, Error>? {
         didSet {
@@ -25,7 +25,7 @@ class TMROFuture<Value> {
     private var valueCallbacks: [(Value) -> Void] = []
 
     // Calls the callback once the future receives a result, or immediately if it already has one.
-    func observe(with callback: @escaping (Result<Value, Error>) -> Void) {
+    public func observe(with callback: @escaping (Result<Value, Error>) -> Void) {
         self.callbacks.append(callback)
 
         // If a result has already been set, call the callback directly
@@ -36,7 +36,7 @@ class TMROFuture<Value> {
 
     // Calls the callback back once the future receives a value, or immediately if it already has one.
     // Does NOT call the callback in the event of an error.
-    func observeValue(with callback: @escaping (Value) -> Void) {
+    public func observeValue(with callback: @escaping (Value) -> Void) {
         self.valueCallbacks.append(callback)
 
         // If a result has already been set, call the callback directly
@@ -69,9 +69,9 @@ class TMROFuture<Value> {
 
 // A future value that can be fulfilled. Promises are a subclass of futures that allow you to set the
 // result or pass in an error, thus alerting any observers.
-class TMROPromise<Value>: TMROFuture<Value> {
+public final class TMROPromise<Value>: TMROFuture<Value> {
 
-    init(value: Value? = nil) {
+    public init(value: Value? = nil) {
         super.init()
 
         // If the value was already known at the time the promise was constructed,
@@ -81,16 +81,16 @@ class TMROPromise<Value>: TMROFuture<Value> {
         }
     }
 
-    init(error: Error) {
+    public init(error: Error) {
         super.init()
         self.result = Result.failure(error)
     }
 
-    func resolve(with value: Value) {
+    public func resolve(with value: Value) {
         self.result = .success(value)
     }
 
-    func reject(with error: Error) {
+    public func reject(with error: Error) {
         self.result = .failure(error)
     }
 }
